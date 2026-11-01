@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#123d2b">
+  <meta name="description" content="Flaming Word — a daily encounter with God's Word. Free Christian devotionals by Pastor Emmanuel Adikwu.">
+  <title>Flaming Word | Daily Devotional</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="Flaming Word home"><span class="brand-mark">✦</span><span>FLAMING <b>WORD</b><small> A DAILY ENCOUNTER WITH GOD'S WORD</small></span></a>
+  <button id="menuBtn" class="menu-btn" aria-label="Open menu">☰</button>
+  <nav id="nav"><a href="#today">Today</a><a href="#archive">Archive</a><a href="#about">About</a><button id="adminOpen" class="nav-admin">Admin</button></nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy"><span class="eyebrow">DAILY SPIRITUAL NOURISHMENT</span><h1>Let the Word<br><em>set your heart aflame.</em></h1><p>Grow in faith. Walk in truth. Live by the Word.</p><a class="gold-btn" href="#today">Read Today's Devotional <span>→</span></a></div>
+    <div class="hero-art"><div class="sun-glow"></div><div class="open-book">✧<span>WORD</span><small>OF LIFE</small></div><div class="verse-mark">“Your word is a lamp to my feet<br>and a light to my path.”<b>PSALM 119:105</b></div></div>
+  </section>
+  <section id="today" class="section today-section">
+    <div class="section-heading"><div><span class="eyebrow">PAUSE · READ · REFLECT · PRAY</span><h2>Today's Devotional</h2></div><span id="todayDate" class="date-pill"></span></div>
+    <article id="featured" class="devotional-card"><div class="loading">Loading today's word…</div></article>
+  </section>
+  <section class="quote-band"><span>✦</span><p>“Man shall not live by bread alone, but by every word that proceedeth out of the mouth of God.”</p><b>MATTHEW 4:4</b></section>
+  <section id="archive" class="section">
+    <div class="section-heading"><div><span class="eyebrow">KEEP GROWING</span><h2>Devotional Archive</h2><p class="muted">Revisit previous messages and continue your journey.</p></div></div>
+    <div class="search-row"><input id="searchInput" type="search" placeholder="Search by title, topic or scripture…"><button id="searchBtn">Search</button></div>
+    <div id="archiveList" class="archive-grid"><div class="loading">Loading devotionals…</div></div>
+  </section>
+  <section id="about" class="about-section"><div class="about-icon">✦</div><div><span class="eyebrow">ABOUT FLAMING WORD</span><h2>Growing through God's Word, one day at a time.</h2><p>Flaming Word is a free daily devotional guide created to inspire faith, deepen understanding of Scripture, and encourage practical Christian living.</p><p class="author">Pastor Emmanuel Adikwu</p></div></section>
+</main>
+<footer><a class="brand footer-brand" href="#">✦ FLAMING <b>WORD</b></a><p>Rooted in Scripture. Growing in grace.</p><small>© <span id="year"></span> Flaming Word. All rights reserved.</small></footer>
+
+<div id="readerModal" class="modal hidden" role="dialog" aria-modal="true" aria-label="Devotional reading"><div class="modal-panel reader-panel"><button class="close" data-close="readerModal">×</button><div id="readerContent"></div><div class="reader-actions"><button id="bookmarkBtn" class="outline-btn">☆ Save devotional</button><button id="shareBtn" class="gold-btn">Share devotional ↗</button></div></div></div>
+<div id="adminModal" class="modal hidden" role="dialog" aria-modal="true" aria-label="Administrator"><div class="modal-panel admin-panel"><button class="close" data-close="adminModal">×</button><div id="adminContent"><span class="eyebrow">PRIVATE AREA</span><h2>Administrator login</h2><p class="muted">Sign in with the administrator account created in Supabase.</p><form id="loginForm"><label>Email<input name="email" type="email" required placeholder="Admin email"></label><label>Password<input name="password" type="password" required placeholder="Password"></label><button class="gold-btn" type="submit">Sign in</button><p id="loginMsg" class="form-msg"></p></form></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+</body></html>
