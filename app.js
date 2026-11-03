@@ -1,6 +1,6 @@
 // Flaming Word starter. Add your Supabase project URL and anon key below.
 const SUPABASE_URL = "const SUPABASE_URL = "https://yvdohftrcjuqqszjxbxb.supabase.co
-const SUPABASE_ANON_KEY = "sb_publishable_h8x4smqO00LR8d08sjZx2Q_11UoYr0g";
+const SUPABASE_ANON_KEY = "sb_publishable_h8x4smqO00LR8d08sjZx2Q_11UoYr0g
 const configured = SUPABASE_URL.startsWith("https://") && !SUPABASE_URL.includes("YOUR_") && !SUPABASE_ANON_KEY.includes("YOUR_");
 const db = configured && window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
 const $ = s => document.querySelector(s);
