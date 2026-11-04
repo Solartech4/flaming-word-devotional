@@ -15,7 +15,14 @@ async function loadData(){
   $('#year').textContent = new Date().getFullYear();
   if(db){
     const {data,error}=await db.from('devotionals').select('*').in('status',['published','scheduled']).lte('publish_at',new Date().toISOString()).order('publish_at',{ascending:false});
-    if(!error) devotionals=data||[];
+    if(error){
+  console.error("Flaming Word Supabase error:", error);
+  alert("Database error: " + error.message);
+  devotionals=[];
+} else {
+  devotionals=data||[];
+  console.log("Flaming Word devotionals loaded:", devotionals);
+}
   } else devotionals=JSON.parse(localStorage.getItem('flamingWordDemo')||'null')||sample;
   render();
 }
