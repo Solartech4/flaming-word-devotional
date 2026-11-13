@@ -57,4 +57,5 @@ async function showAdmin(){
 }
 async function saveDevotional(e){e.preventDefault();const f=new FormData(e.target);const row=Object.fromEntries(f.entries());delete row.id;row.publish_at=new Date(row.publish_at).toISOString();const id=e.target.elements.id.value;const result=id?await db.from('devotionals').update(row).eq('id',id):await db.from('devotionals').insert(row);$('#saveMsg').textContent=result.error?result.error.message:'Devotional saved successfully.';if(!result.error){await showAdmin();await loadData()}}
 if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+alert("FLAMING WORD JAVASCRIPT IS RUNNING");
 loadData();
