@@ -9,7 +9,27 @@ let current = null;
 let user = null;
 const todayISO = () => new Date().toLocaleDateString('en-CA');
 const esc = s => String(s ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const sample = [{id:'sample-1',title:'Faith That Overcomes',scripture:'1 John 5:4',date:todayISO(),body:'Faith is more than positive thinking; it is a confident response to the character and promises of God. The believer who trusts God learns to stand firm even when circumstances appear uncertain.\\n\\nThe world presents challenges that can weaken the heart, but the Word of God reminds us that victory begins with a life anchored in Christ. Faith does not deny the existence of difficulty; it declares that God is greater than every difficulty.\\n\\nAs you walk with God today, let His promises shape your decisions, your words, and your expectations. Take the next step in obedience, knowing that the One who called you is faithful.\\n\\nDo not measure God's faithfulness by the speed of your answers. Keep trusting, keep obeying, and keep growing in His Word.',reflection:'Where is God asking you to trust Him more deeply today? What promise from Scripture can guide your response?',takeaway:'Choose one practical step of obedience today, and take it in faith.',prayer:'Heavenly Father, strengthen my faith and help me to trust Your Word above my circumstances. Give me grace to obey You with courage today, in Jesus’ name. Amen.',status:'published'}];
+const sample = 
+const sample = [{
+  id: 'sample-1',
+  title: 'Faith That Overcomes',
+  scripture: '1 John 5:4',
+  date: todayISO(),
+  body: `Faith is more than positive thinking; it is a confident response to the character and promises of God.
+
+The believer who trusts God learns to stand firm even when circumstances appear uncertain.
+
+Faith does not deny the existence of difficulty; it declares that God is greater than every difficulty.
+
+As you walk with God today, let His promises shape your decisions, your words, and your expectations.
+
+Keep trusting, keep obeying, and keep growing in His Word.`,
+  reflection: 'Where is God asking you to trust Him more deeply today?',
+  takeaway: 'Choose one practical step of obedience today, and take it in faith.',
+  prayer: 'Heavenly Father, strengthen my faith and help me to trust Your Word above my circumstances. In Jesus’ name. Amen.',
+  status: 'published'
+}];
+ That Overcomes',scripture:'1 John 5:4',date:todayISO(),body:'Faith is more than positive thinking; it is a confident response to the character and promises of God. The believer who trusts God learns to stand firm even when circumstances appear uncertain.\\n\\nThe world presents challenges that can weaken the heart, but the Word of God reminds us that victory begins with a life anchored in Christ. Faith does not deny the existence of difficulty; it declares that God is greater than every difficulty.\\n\\nAs you walk with God today, let His promises shape your decisions, your words, and your expectations. Take the next step in obedience, knowing that the One who called you is faithful.\\n\\nDo not measure God's faithfulness by the speed of your answers. Keep trusting, keep obeying, and keep growing in His Word.',reflection:'Where is God asking you to trust Him more deeply today? What promise from Scripture can guide your response?',takeaway:'Choose one practical step of obedience today, and take it in faith.',prayer:'Heavenly Father, strengthen my faith and help me to trust Your Word above my circumstances. Give me grace to obey You with courage today, in Jesus’ name. Amen.',status:'published'}];
 console.log("FLAMING WORD APP.JS IS RUNNING");
 async function loadData(){
   $('#todayDate').textContent = new Date().toLocaleDateString(undefined,{weekday:'long',year:'numeric',month:'long',day:'numeric'});
